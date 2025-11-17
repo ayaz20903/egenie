@@ -44,9 +44,9 @@ export default function Header() {
           <Link href="#demo" className="">
             Chat with eGenie
           </Link>
-          <Link href="#contact" className="">
+          {/* <Link href="#contact" className="">
             Contact
-          </Link>
+          </Link> */}
           <Link
             href="#get-started"
             className="px-5 py-2  bg-[linear-gradient(135deg,#4C8CFF_0%,#7A44E8_100%)] text-white font-semibold rounded-full shadow-lg hover:opacity-90 transition"
