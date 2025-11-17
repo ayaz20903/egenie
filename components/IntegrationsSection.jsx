@@ -21,13 +21,12 @@ const integrations = [
     "/integration-logo3.png",
   ],
   [
-    "/integration-logo4.png",
-    "/integration-logo5.png",
-    "/integration-logo1.png",
-    "/integration-logo2.png",
-    "/integration-logo3.png",
-
     "/integration-logo6.png",
+    "/integration-logo5.png",
+    "/integration-logo4.png",
+    "/integration-logo3.png",
+    "/integration-logo2.png",
+    "/integration-logo1.png",
   ],
 ];
 

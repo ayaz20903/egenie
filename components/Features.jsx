@@ -96,11 +96,12 @@ export default function Features() {
           {features.map((f, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 0.8,
-                delay: i * 0.12, // stagger animation
+                duration: 0.6,
+                ease: "easeOut",
+                delay: 0.2 + i * 0.1,
               }}
               viewport={{ amount: 0.4 }}
               className="
@@ -115,6 +116,7 @@ export default function Features() {
                 hover:shadow-[0_12px_40px_rgba(120,120,255,0.25)]
                 hover:scale-[1.05]
                 overflow-hidden
+                cursor-pointer
               "
             >
               {/* Soft Glow */}
@@ -140,6 +142,26 @@ export default function Features() {
               />
 
               {/* Content */}
+              {/* Floating Video Preview */}
+              <video
+                className="
+                  absolute top-[125px] left-1/2 -translate-x-1/2
+                  w-[260px] h-auto rounded-xl shadow-lg
+                  opacity-0 scale-95
+                  pointer-events-none
+                  transition-all duration-300
+                  group-hover:opacity-100 group-hover:scale-100
+                  z-20
+                "
+                src="/videos/dummy-video.mov"
+                muted
+                playsInline
+                loop
+                preload="metadata"
+                autoPlay
+              />
+
+              {/* MAIN CONTENT */}
               <div className="relative z-10">
                 <div
                   className="
