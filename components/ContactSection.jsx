@@ -6,7 +6,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="py-24 px-6 text-white flex flex-col items-center justify-center bg-[linear-gradient(47deg,#d4c8ff_0%,#c4f2ff_100%)]"
+      className="py-12 lg:py-24 px-6 text-white flex flex-col items-center justify-center bg-[linear-gradient(47deg,#d4c8ff_0%,#c4f2ff_100%)]"
     >
       {/* Heading */}
       <motion.h2
@@ -27,8 +27,8 @@ export default function ContactSection() {
         transition={{ delay: 0.2, duration: 0.6 }}
         className="text-black mt-4 text-center text-xl max-w-xl"
       >
-        Have a question or want to collaborate? Fill out the form below and our
-        team will get back to you shortly.
+        Have a question ? Fill out the form below and our team will get back to
+        you shortly.
       </motion.p>
 
       {/* Form */}

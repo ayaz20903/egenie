@@ -1,13 +1,22 @@
+"use client";
+
 import Image from "next/image";
 import { useRef, useState } from "react";
+import { motion } from "framer-motion";
 import dummy from "../public/realtimedummy.png";
 
 export default function RealtimeAnswers() {
   return (
-    <section className="w-full py-24   bg-[linear-gradient(70deg,#d4c8ff_0%,#c4f2ff_100%)]">
+    <section className="w-full py:0 lg:py-24 bg-[linear-gradient(70deg,#d4c8ff_0%,#c4f2ff_100%)]">
       <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-14">
         {/* LEFT — STICKY */}
-        <div className="lg:sticky lg:top-[40%] self-start h-fit">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: false, amount: 0.3 }}
+          className="lg:sticky lg:top-[40%] self-center lg:self-start h-fit"
+        >
           <h2
             className="text-4xl md:text-6xl font-bold leading-snug
             bg-gradient-to-r from-[#3B82F6] to-[#6D28D9] bg-clip-text text-transparent"
@@ -29,37 +38,42 @@ export default function RealtimeAnswers() {
               Get the extension →
             </a>
           </div>
-        </div>
+        </motion.div>
 
         {/* RIGHT — SCROLLABLE CARDS */}
-        <div className="flex flex-col gap-12 custom-scroll overflow-y-auto pr-3">
-          <FeatureCard
-            image={dummy}
-            video="/videos/dummy-video.mov"
-            title="Throw in anything—watch the magic happen"
-            text="Creating a contract or building a quiz? Upload your PDFs, notes, or guides eGenie absorbs them and answers with full context."
-          />
-
-          <FeatureCard
-            image={dummy}
-            video="/videos/dummy-video.mov"
-            title="Why jump tabs? Just ask right here"
-            text="Get summaries, insights, rewrites, and new content from any webpage—without leaving where you are."
-          />
-
-          <FeatureCard
-            image={dummy}
-            video="/videos/dummy-video.mov"
-            title="Skip the scrolling—get the good stuff fast"
-            text="Skip digging through endless Google results. Get a clean summary instantly and request the exact details you need"
-          />
-
-          <FeatureCard
-            image={dummy}
-            video="/videos/dummy-video.mov"
-            title="Learn the fun way, not the fast-forward way"
-            text="Learn actively with smart video summaries and interactive chat—no more speeding through videos on 2×."
-          />
+        <div className="flex flex-col gap-12 overflow-y-auto pr-0 lg:pr-3">
+          {[0, 1, 2, 3].map((i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+            >
+              <FeatureCard
+                image={dummy}
+                video="/videos/dummy-video.mov"
+                title={
+                  i === 0
+                    ? "Throw in anything—watch the magic happen"
+                    : i === 1
+                    ? "Why jump tabs? Just ask right here"
+                    : i === 2
+                    ? "Skip the scrolling—get the good stuff fast"
+                    : "Learn the fun way, not the fast-forward way"
+                }
+                text={
+                  i === 0
+                    ? "Creating a contract or building a quiz? Upload your PDFs, notes, or guides eGenie absorbs them and answers with full context."
+                    : i === 1
+                    ? "Get summaries, insights, rewrites, and new content from any webpage—without leaving where you are."
+                    : i === 2
+                    ? "Skip digging through endless Google results. Get a clean summary instantly and request the exact details you need"
+                    : "Learn actively with smart video summaries and interactive chat—no more speeding through videos on 2×."
+                }
+              />
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
@@ -76,7 +90,6 @@ function FeatureCard({ image, video, title, text }) {
   const handleEnter = () => {
     setHovered(true);
 
-    // Ensure the video loads before playing (fixes first-hover issue)
     if (videoRef.current) {
       videoRef.current.currentTime = 0;
       videoRef.current.play().catch(() => {});
@@ -94,8 +107,7 @@ function FeatureCard({ image, video, title, text }) {
 
   return (
     <div
-      className="rounded-[35px] overflow-hidden w-full cursor-pointer 
-       transition-all"
+      className="rounded-[35px] overflow-hidden w-full cursor-pointer transition-all"
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
     >
@@ -127,8 +139,12 @@ function FeatureCard({ image, video, title, text }) {
 
       {/* TEXT */}
       <div className="py-8 px-1">
-        <h3 className="text-3xl font-semibold text-heading mb-2">{title}</h3>
-        <p className="text-heading/70 text-xl leading-relaxed">{text}</p>
+        <h3 className="text-2xl lg:text-3xl font-semibold text-heading mb-2">
+          {title}
+        </h3>
+        <p className="text-heading/70 text-lg lg:text-xl leading-relaxed">
+          {text}
+        </p>
       </div>
     </div>
   );

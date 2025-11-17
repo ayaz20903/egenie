@@ -1,8 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
 import {
-  Sparkles,
-  Wand2,
-  Zap,
-  Layers,
   Mail,
   PanelRight,
   Search,
@@ -48,7 +47,7 @@ export default function Features() {
     {
       title: "Summarizer",
       desc: "Convert long articles and webpages into concise, easy-to-read summaries in seconds",
-      icon: <ListMinus className="w-6 h-6 text-white" />, // clean summary icon
+      icon: <ListMinus className="w-6 h-6 text-white" />,
     },
     {
       title: "Chat Assistant",
@@ -61,13 +60,17 @@ export default function Features() {
     <section
       id="features"
       className="
-        w-full py-20
+        w-full py-10 lg:py-20
         bg-[linear-gradient(127deg,#d4c8ff_0%,#c4f2ff_100%)]
       "
     >
       <div className="max-w-7xl mx-auto px-6 text-center">
         {/* Heading */}
-        <h2
+        <motion.h2
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ amount: 0.4 }}
           className="
             text-4xl md:text-5xl font-bold mb-5
             bg-gradient-to-r from-[#3B82F6] to-[#6D28D9]
@@ -75,17 +78,31 @@ export default function Features() {
           "
         >
           Everything You Need. In One Platform
-        </h2>
+        </motion.h2>
 
-        <p className="text-heading/70 text-2xl max-w-2xl mx-auto mb-14 leading-relaxed">
+        {/* Subheading */}
+        <motion.p
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          viewport={{ amount: 0.4 }}
+          className="text-heading/70 text-xl lg:text-2xl max-w-2xl mx-auto mb-10 lg:mb-14 leading-relaxed"
+        >
           eGenie gives you $130 of AI brilliance for only $19
-        </p>
+        </motion.p>
 
         {/* Feature Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((f, i) => (
-            <div
+            <motion.div
               key={i}
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{
+                duration: 0.8,
+                delay: i * 0.12, // stagger animation
+              }}
+              viewport={{ amount: 0.4 }}
               className="
                 group
                 relative
@@ -100,7 +117,7 @@ export default function Features() {
                 overflow-hidden
               "
             >
-              {/* Soft Glow Border */}
+              {/* Soft Glow */}
               <span
                 className="
                   absolute inset-0 rounded-2xl
@@ -113,19 +130,17 @@ export default function Features() {
                 "
               />
 
-              {/* Subtle Shine */}
+              {/* Shine */}
               <span
                 className="
                   absolute inset-0 rounded-2xl
                   bg-gradient-to-br from-white/25 via-transparent to-transparent
-                  opacity-40
-                  pointer-events-none
+                  opacity-40 pointer-events-none
                 "
               />
 
               {/* Content */}
               <div className="relative z-10">
-                {/* Icon Circle */}
                 <div
                   className="
                     w-14 h-14 mx-auto mb-6 flex items-center justify-center
@@ -147,7 +162,7 @@ export default function Features() {
                   {f.desc}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

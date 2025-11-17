@@ -13,34 +13,35 @@ const integrations = [
     "/integration-logo6.png",
   ],
   [
-    "/integration-logo7.png",
-    "/integration-logo8.png",
-    "/integration-logo9.png",
+    "/integration-Logo9.png",
     "/integration-logo10.png",
     "/integration-logo11.png",
     "/integration-logo12.png",
+    "/integration-logo2.png",
+    "/integration-logo3.png",
   ],
   [
-    "/integration-logo13.png",
-    "/integration-logo14.png",
-    "/integration-logo15.png",
+    "/integration-logo4.png",
+    "/integration-logo5.png",
     "/integration-logo1.png",
     "/integration-logo2.png",
     "/integration-logo3.png",
+
+    "/integration-logo6.png",
   ],
 ];
 
 export default function IntegrationsSection() {
   return (
-    <section className=" bg-[linear-gradient(25deg,#d4c8ff_0%,#c4f2ff_100%)]">
-      <div className="container  m-auto w-full  flex flex-col justify-center px-6 md:px-12 lg:px-20  IntegrationsSection py-20">
+    <section className=" bg-[linear-gradient(141deg,#d4c8ff_0%,#c4f2ff_100%)]">
+      <div className="container  m-auto w-full  flex flex-col justify-center px-6 md:px-12 lg:px-20  IntegrationsSection py-12 lg:py-20">
         <div className=" w-full bg-white rounded-3xl shadow-lg flex flex-col md:flex-row items-center justify-between px-10 IntegrationsSection-wrapper ">
           {/* LEFT CONTENT */}
-          <div className="flex-1  mb-0 lg:mb-10 md:mb-0 p-4">
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#6D28D9] to-[#3B82F6] bg-clip-text text-transparent leading-18 mb-4">
+          <div className="flex-1  mb-0 lg:mb-10 md:mb-0  py-14 px-4 lg:py-4">
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#6D28D9] to-[#3B82F6] bg-clip-text text-transparent leading-18 mb-4 text-center lg:text-left">
               Integrations
             </h2>
-            <p className="bg-gradient-to-r from-[#6D28D9] to-[#3B82F6] bg-clip-text text-transparent  text-3xl mb-8">
+            <p className="bg-gradient-to-r from-[#6D28D9] to-[#3B82F6] bg-clip-text text-transparent  text-3xl mb-8 text-center lg:text-left">
               Sync your tools to manage everything effortlessly from one place.
             </p>
           </div>

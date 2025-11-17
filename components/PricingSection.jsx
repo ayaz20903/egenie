@@ -17,6 +17,7 @@ export default function PricingSection() {
       features: [
         "Limited queries per day",
         "Limited advance credits",
+        "0 extra credits",
         "Access to limited models",
         "No custom integrations",
       ],
@@ -29,8 +30,9 @@ export default function PricingSection() {
       desc: "Ideal for professionals who need consistent help managing content, research, and automation.",
       gradient: "from-[#3730a3] to-[#6d28d9]",
       features: [
-        "Up to 1,000 queries/month",
+        "Up to 2,000 queries/month",
         "200 advance credits",
+        "0 extra credits",
         "Access to all models",
         "Email support ",
         "Custom integrations",
@@ -44,13 +46,30 @@ export default function PricingSection() {
       desc: "For teams and power users. Get unlimited queries, advanced AI models, and full integration power.",
       gradient: "from-[#6d28d9] to-[#db2777]",
       features: [
-        "Unlimited queries",
-        "Full API & custom integrations",
-        "Team access (up to 10 users)",
-        "Real-time analytics dashboard",
-        "24/7 premium support",
+        "Up to 10,000 queries/month",
+        "400 advance credits",
+        "200 extra credits",
+        "Access to all models",
+        "Email support ",
+        "Custom integrations",
       ],
       highlight: true,
+      cta: "Go Super",
+    },
+
+    {
+      name: "Infinity Genie",
+      monthly: 74.99,
+      yearly: 74.99 * 12,
+      desc: "For teams and power users. Get unlimited queries, advanced AI models, and full integration power.",
+      gradient: "from-[#6d28d9] to-[#db2777]",
+      features: [
+        "Unlimited queries",
+        "Unlimited dvance credits",
+        "Access to all models",
+        "Email support ",
+        "Custom integrations",
+      ],
       cta: "Go Super",
     },
   ];
@@ -58,9 +77,9 @@ export default function PricingSection() {
   return (
     <section
       id="pricing"
-      className="py-24 text-white overflow-hidden bg-[linear-gradient(47deg,#d4c8ff_0%,#c4f2ff_100%)]"
+      className="py-12 lg:py-24 text-white overflow-hidden bg-[linear-gradient(135deg,#d4c8ff_0%,#c4f2ff_100%)]"
     >
-      <div className="max-w-6xl mx-auto px-6 text-center">
+      <div className="container mx-auto px-6 text-center">
         {/* Heading */}
         <motion.h2
           initial={{ y: 40, opacity: 0 }}
@@ -122,7 +141,7 @@ export default function PricingSection() {
         </motion.div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="grid md:grid-cols-4 gap-10">
           {plans.map((plan, i) => (
             <motion.div
               key={i}

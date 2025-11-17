@@ -7,6 +7,7 @@ import ModelsShowcase from "../components/ModelsShowcase"
 import FAQ from "../components/FAQ"
 import PricingSection from "../components/PricingSection"
 import ContactSection from "../components/ContactSection"
+import Footer from "../components/Footer"
 export default function Home() {
   return (
     <>
@@ -14,11 +15,12 @@ export default function Home() {
       <Hero/>
       <RealtimeAnswers/>
       <Features/>
-      {/* <IntegrationsSection/> */}
       <ModelsShowcase/>
+      <IntegrationsSection/>
       <FAQ/>
       <PricingSection/>
       <ContactSection/>
+      <Footer/>
     </>
   )
 }

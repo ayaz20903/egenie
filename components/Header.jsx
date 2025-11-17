@@ -10,15 +10,25 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-40 bg-[#ffffff]/0 backdrop-blur-md border-b border-white/10">
-      <div className="container max-full mx-auto flex justify-between items-center px-6 py-4">
+    <header className="fixed top-0 left-0 w-full z-40 lg:z-30 bg-[#ffffff]/0 backdrop-blur-md border-b border-white/10">
+      <div className="container max-full mx-auto flex justify-between items-center px-6 py-3 lg:py-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="hidden lg:flex items-center gap-2">
           <Image
             src={logo}
             alt="eGeniePlus Logo"
-            width={130}
-            height={40}
+            width={100}
+            height={30}
+            className="object-contain"
+          />
+        </Link>
+
+        <Link href="/" className="flex lg:hidden items-center gap-2">
+          <Image
+            src={logo}
+            alt="eGeniePlus Logo"
+            width={70}
+            height={30}
             className="object-contain"
           />
         </Link>
@@ -48,7 +58,7 @@ export default function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-white focus:outline-none"
+          className="md:hidden text-black focus:outline-none"
         >
           {isOpen ? (
             <svg
@@ -90,7 +100,7 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden bg-[#0A0A0A]/95 backdrop-blur-lg border-t border-white/10 px-6 py-4 space-y-4 text-gray-300"
+            className="md:hidden bg-[#0A0A0A]/95 backdrop-blur-lg border-t border-white/10 px-6 py-4 space-y-4 text-gray-300 z-40"
           >
             <Link
               href="#features"

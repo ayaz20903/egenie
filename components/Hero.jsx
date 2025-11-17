@@ -18,7 +18,7 @@ export default function Hero() {
       <div className="absolute -bottom-32 -right-20 w-96 h-96 bg-secondarySoft rounded-full blur-[140px] opacity-50"></div>
 
       {/* HERO CONTENT */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-[100vh] text-center px-6">
+      <div className="relative flex flex-col items-center justify-center min-h-[100vh] text-center px-6">
         {/* Video — plays once */}
         <motion.video
           initial={{ opacity: 0, scale: 0.95 }}
@@ -30,7 +30,7 @@ export default function Hero() {
           playsInline
           preload="auto"
           onEnded={() => setVideoEnded(true)}
-          className="h-[350px] md:h-[600px] object-contain mb-6"
+          className="h-[350px] md:h-[600px] object-contain mb-6 z-30"
         />
 
         {/* Heading */}
