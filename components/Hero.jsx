@@ -23,13 +23,14 @@ export default function Hero() {
         <motion.video
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
           src="/videos/hero-genie.mp4"
           muted
           autoPlay
           playsInline
           preload="auto"
           onEnded={() => setVideoEnded(true)}
+          onLoadedMetadata={(e) => (e.target.playbackRate = 2)} // <-- 2x speed
           className="h-[350px] md:h-[600px] object-contain mb-6 z-30"
         />
 

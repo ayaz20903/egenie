@@ -156,7 +156,7 @@ export default function Features() {
                 />
 
                 {/* Tooltip */}
-                {hovered === i && (
+                {/* {hovered === i && (
                   <div
                     className="
                       absolute -top-4 left-1/2 -translate-x-1/2 -translate-y-full
@@ -184,7 +184,7 @@ export default function Features() {
                       />
                     </div>
                   </div>
-                )}
+                )} */}
 
                 {/* Floating Video (outside card) */}
                 {hovered === i && (
@@ -196,9 +196,9 @@ export default function Features() {
                     className="
                     absolute inset-0
                     m-auto
-                    top-[30%]
+                    top-[0%] lg:top-[30%]
                     translate-x-1/2 
-                    w-[260px] rounded-xl shadow-2xl border border-white/40
+                    w-[90%] lg:w-[260px] rounded-xl shadow-2xl border border-white/40
                     z-[60]
                     pointer-events-none
                   "
