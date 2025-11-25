@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import eGenie from "../public/new-genie.png";
+import chrome from "../public/chrome-icon.svg";
 import { useState } from "react";
 
 export default function Hero() {
@@ -63,6 +63,33 @@ export default function Hero() {
           transition={{ delay: 0.4, duration: 0.7 }}
           className="mt-10 flex justify-center gap-4"
         >
+          <a
+            className="flex items-center justify-center gap-2 rounded-lg bg-white px-3 py-2 text-black hover:bg-white dark:text-black
+            bg-[linear-gradient(135deg,#dee5fe_0%,#e8e1fc_100%)] border border-[#6664f2]"
+            rel="noopener noreferrer nofollow"
+            target="_blank"
+            href="https://chromewebstore.google.com/detail/merlin-1-click-access-to/camppjleccjaphfdbohjdohecfnoikec?utm_source=getmerlin&amp;utm_medium=website&amp;utm_campaign=extension_install"
+          >
+            <div className="flex items-center justify-center rounded-md">
+              {/* <img alt="Chrome Web Store Logo" loading="lazy" width="30" height="26.19" decoding="async" data-nimg="1" src="https://cdn.getmerlin.in/cms/Chrome_Web_Store_icon_5e2d8a5a4f.svg" style="color: transparent;"> */}
+              <Image
+                src={chrome}
+                alt="chrome logo"
+                width={30}
+                height={26}
+                className=""
+              />
+            </div>
+            <span className="flex flex-col gap-1">
+              <span className="text-[11px] font-medium text-left leading-[11px]">
+                Available in
+              </span>
+              <span className="text-[14px] font-medium leading-[14px]">
+                Chrome Web Store
+              </span>
+            </span>
+          </a>
+
           {/* Primary Button */}
           <a
             href="/pricing"

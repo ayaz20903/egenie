@@ -7,6 +7,7 @@ import ModelsShowcase from "../components/ModelsShowcase"
 import FAQ from "../components/FAQ"
 import PricingSection from "../components/PricingSection"
 import ContactSection from "../components/ContactSection"
+import PricingComparison from "../components/PricingComparison"
 import Footer from "../components/Footer"
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <ModelsShowcase/>
       <IntegrationsSection/>
       <FAQ/>
+      <PricingComparison/>
       <PricingSection/>
       <ContactSection/>
       <Footer/>

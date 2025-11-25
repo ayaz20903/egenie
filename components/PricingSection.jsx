@@ -15,8 +15,8 @@ export default function PricingSection() {
       desc: "Perfect for new users exploring what eGenie can do. Get daily insights and responses for free.",
       gradient: "from-[#1f2937] to-[#111827]",
       features: [
-        "Limited queries per day",
-        "Limited advance credits",
+        "3 days free trial, upto 30 queries",
+        "No advance credits",
         "0 extra credits",
         "Access to limited models",
         "No custom integrations",
@@ -29,14 +29,47 @@ export default function PricingSection() {
       yearly: 14.99 * 12,
       desc: "Ideal for professionals who need consistent help managing content, research, and automation.",
       gradient: "from-[#3730a3] to-[#6d28d9]",
+
       features: [
         "Up to 2,000 queries/month",
         "200 advance credits",
         "0 extra credits",
         "Access to all models",
-        "Email support ",
-        "Custom integrations",
+        "Email support",
+        "Smart writing",
+        "Translation",
+        "Summary",
+        "ChatPDF",
+        "Change tone",
+        "Simplify language",
+        "Fix spelling & grammar",
+        "Make shorter or longer",
+        {
+          title: "Accesses to basic models",
+          items: ["GPT-4o mini", "Claude 3.5 Haiku", "DeepSeek V3 & R1"],
+        },
+        {
+          title: "Accesses to advanced models",
+          items: ["GPT-5.1", "Claude 4.5", "Gemini 3 Pro", "DeepSeek-V3"],
+        },
+        {
+          title: "Image and video generation",
+          items: ["FLUX.1-Dev", "FLUX.1-Pro", "Stable Diffusion", "DALL·E 3"],
+        },
+        {
+          title: "Custom Integration",
+          items: [
+            "Gmail",
+            "Outlook",
+            "LinkedIn",
+            "Twitter",
+            "Facebook",
+            "Instagram",
+            "YouTube",
+          ],
+        },
       ],
+
       cta: "Upgrade Now",
     },
     {
@@ -45,13 +78,45 @@ export default function PricingSection() {
       yearly: 22.99 * 12,
       desc: "For teams and power users. Get unlimited queries, advanced AI models, and full integration power.",
       gradient: "from-[#6d28d9] to-[#db2777]",
+
       features: [
         "Up to 10,000 queries/month",
         "400 advance credits",
         "200 extra credits",
         "Access to all models",
-        "Email support ",
-        "Custom integrations",
+        "Email support",
+        "Smart writing",
+        "Translation",
+        "Summary",
+        "ChatPDF",
+        "Change tone",
+        "Simplify language",
+        "Fix spelling & grammar",
+        "Make shorter or longer",
+        {
+          title: "Accesses to basic models",
+          items: ["GPT-4o mini", "Claude 3.5 Haiku", "DeepSeek V3 & R1"],
+        },
+        {
+          title: "Accesses to advanced models",
+          items: ["GPT-5.1", "Claude 4.5", "Gemini 3 Pro", "DeepSeek-V3"],
+        },
+        {
+          title: "Image and video generation",
+          items: ["FLUX.1-Dev", "FLUX.1-Pro", "Stable Diffusion", "DALL·E 3"],
+        },
+        {
+          title: "Custom Integration",
+          items: [
+            "Gmail",
+            "Outlook",
+            "LinkedIn",
+            "Twitter",
+            "Facebook",
+            "Instagram",
+            "YouTube",
+          ],
+        },
       ],
       highlight: true,
       cta: "Go Super",
@@ -70,6 +135,46 @@ export default function PricingSection() {
         "Email support ",
         "Custom integrations",
       ],
+
+      features: [
+        "Unlimited queries",
+        "Unlimited advance credits",
+        "Unlimited extra credits",
+        "Access to all models",
+        "Email support",
+        "Smart writing",
+        "Translation",
+        "Summary",
+        "ChatPDF",
+        "Change tone",
+        "Simplify language",
+        "Fix spelling & grammar",
+        "Make shorter or longer",
+        {
+          title: "Accesses to basic models",
+          items: ["GPT-4o mini", "Claude 3.5 Haiku", "DeepSeek V3 & R1"],
+        },
+        {
+          title: "Accesses to advanced models",
+          items: ["GPT-5.1", "Claude 4.5", "Gemini 3 Pro", "DeepSeek-V3"],
+        },
+        {
+          title: "Image and video generation",
+          items: ["FLUX.1-Dev", "FLUX.1-Pro", "Stable Diffusion", "DALL·E 3"],
+        },
+        {
+          title: "Custom Integration",
+          items: [
+            "Gmail",
+            "Outlook",
+            "LinkedIn",
+            "Twitter",
+            "Facebook",
+            "Instagram",
+            "YouTube",
+          ],
+        },
+      ],
       cta: "Go Super",
     },
   ];
@@ -77,7 +182,7 @@ export default function PricingSection() {
   return (
     <section
       id="pricing"
-      className="py-12 lg:py-24 text-white overflow-hidden bg-[linear-gradient(135deg,#d4c8ff_0%,#c4f2ff_100%)]"
+      className="py-12 lg:py-24 text-white overflow-hidden bg-[linear-gradient(74deg,#d4c8ff_0%,#c4f2ff_100%)]"
     >
       <div className="container mx-auto px-6 text-center">
         {/* Heading */}
@@ -163,8 +268,9 @@ export default function PricingSection() {
                   {plan.monthly === "Free"
                     ? "Free"
                     : isYearly
-                    ? `£${plan.yearly.toFixed(2)}`
-                    : `£${plan.monthly}`}
+                    ? `$${plan.yearly.toFixed(2)}`
+                    : `$${plan.monthly}`}
+
                   <span className="text-sm text-gray-400">
                     {plan.monthly === "Free"
                       ? ""
@@ -174,13 +280,43 @@ export default function PricingSection() {
                   </span>
                 </p>
 
-                <ul className="text-left space-y-3 mb-10">
+                {/* <ul className="text-left space-y-3 mb-10">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center gap-2">
                       <CheckCircle className="w-5 h-5 text-green-400" />
                       <span className="text-gray-200">{feature}</span>
                     </li>
                   ))}
+                </ul> */}
+                <ul className="text-left space-y-4 mb-10">
+                  {plan.features.map((feature, idx) => {
+                    // If it's a normal string feature
+                    if (typeof feature === "string") {
+                      return (
+                        <li key={idx} className="flex items-center gap-2">
+                          <CheckCircle className="w-5 h-5 text-green-400" />
+                          <span className="text-gray-200">{feature}</span>
+                        </li>
+                      );
+                    }
+
+                    // If it's a section (heading + items)
+                    return (
+                      <li key={idx} className="mt-4">
+                        <h4 className="text-lg font-semibold text-white mb-2">
+                          {feature.title}
+                        </h4>
+                        <ul className="space-y-2 ml-1">
+                          {feature.items.map((item, i) => (
+                            <li key={i} className="flex items-center gap-2">
+                              <CheckCircle className="w-5 h-5 text-green-400" />
+                              <span className="text-gray-200">{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
 
