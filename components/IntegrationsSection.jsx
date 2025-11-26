@@ -32,7 +32,7 @@ const integrations = [
 
 export default function IntegrationsSection() {
   return (
-    <section className=" bg-[linear-gradient(141deg,#d4c8ff_0%,#c4f2ff_100%)]">
+    <section className=" bg-[linear-gradient(47deg,#d4c8ff_0%,#c4f2ff_100%)]">
       <div className="container  m-auto w-full  flex flex-col justify-center px-6 md:px-12 lg:px-20  IntegrationsSection py-12 lg:py-20">
         <div className=" w-full bg-white rounded-3xl shadow-lg flex flex-col md:flex-row items-center justify-between px-10 IntegrationsSection-wrapper ">
           {/* LEFT CONTENT */}

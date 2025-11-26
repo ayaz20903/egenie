@@ -6,6 +6,7 @@ import IntegrationsSection from "../components/IntegrationsSection"
 import ModelsShowcase from "../components/ModelsShowcase"
 import FAQ from "../components/FAQ"
 import PricingSection from "../components/PricingSection"
+import AiTranslatePreview from "../components/AiTranslatePreview"
 import ContactSection from "../components/ContactSection"
 import PricingComparison from "../components/PricingComparison"
 import Footer from "../components/Footer"
@@ -16,11 +17,12 @@ export default function Home() {
       <Hero/>
       <RealtimeAnswers/>
       <Features/>
+      <AiTranslatePreview/>
       <ModelsShowcase/>
       <IntegrationsSection/>
-      <FAQ/>
       <PricingComparison/>
       <PricingSection/>
+      <FAQ/>
       <ContactSection/>
       <Footer/>
     </>

@@ -61,7 +61,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.7 }}
-          className="mt-10 flex justify-center gap-4"
+          className="mt-10 flex flex-col lg:flex-row justify-center gap-4"
         >
           <a
             className="flex items-center justify-center gap-2 rounded-lg bg-white px-3 py-2 text-black hover:bg-white dark:text-black

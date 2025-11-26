@@ -2,9 +2,9 @@
 
 export default function PricingComparison() {
   return (
-    <div className="w-full bg-[linear-gradient(118deg,#d4c8ff_0%,#c4f2ff_100%)] text-white py-16 px-4 flex flex-col items-center justify-center relative">
-      <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#3B82F6] to-[#6D28D9] bg-clip-text text-transparent   ">
-        Unlock 6 Premium-Grade AI Models
+    <div className="w-full bg-[linear-gradient(122deg,#d4c8ff_0%,#c4f2ff_100%)] text-white py-16 px-4 flex flex-col items-center justify-center relative">
+      <h2 className="text-4xl md:text-5xl font-bold mb-10 lg:mb-20 bg-gradient-to-r from-[#3B82F6] to-[#6D28D9] bg-clip-text text-transparent text-center  ">
+        Unlock Premium-Grade AI Models
       </h2>
 
       <div className="max-w-7xl w-full grid md:grid-cols-2 gap-10 relative">

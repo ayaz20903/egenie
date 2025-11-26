@@ -12,7 +12,7 @@ export default function ModelsShowcase() {
   ];
 
   return (
-    <section className="w-full py-10 lg:py-24 bg-[linear-gradient(47deg,#d4c8ff_0%,#c4f2ff_100%)]">
+    <section className="w-full py-10 lg:py-24 bg-[linear-gradient(127deg,#d4c8ff_0%,#c4f2ff_100%)]">
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}

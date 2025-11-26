@@ -6,7 +6,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="py-12 lg:py-24 px-6 text-white flex flex-col items-center justify-center bg-[linear-gradient(125deg,#d4c8ff_0%,#c4f2ff_100%)]"
+      className="py-12 lg:py-24 px-6 text-white flex flex-col items-center justify-center bg-[linear-gradient(47deg,#d4c8ff_0%,#c4f2ff_100%)]"
     >
       {/* Heading */}
       <motion.h2

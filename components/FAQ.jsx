@@ -41,7 +41,7 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="px-6 bg-[linear-gradient(57deg,#d4c8ff_0%,#c4f2ff_100%)]">
+    <section className="px-6 bg-[linear-gradient(126deg,#d4c8ff_0%,#c4f2ff_100%)]">
       <div className="max-w-7xl mx-auto py-10 lg:py-20">
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
