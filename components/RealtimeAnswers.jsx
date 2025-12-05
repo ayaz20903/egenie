@@ -41,7 +41,7 @@ export default function RealtimeAnswers() {
         </motion.div>
 
         {/* RIGHT — SCROLLABLE CARDS */}
-        <div className="flex flex-col gap-12 overflow-y-auto pr-0 lg:pr-3">
+        <div className="flex flex-col gap-12 overflow-y-auto pr-0 lg:pr-3 overflow-y-auto no-scrollbar">
           {[0, 1, 2, 3].map((i) => (
             <motion.div
               key={i}

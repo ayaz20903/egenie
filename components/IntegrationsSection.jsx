@@ -6,7 +6,7 @@ import Image from "next/image";
 const integrations = [
   [
     "/integration-logo1.png",
-    "/integration-logo2.png",
+    "/integration-logo2-1.png",
     "/integration-logo3.png",
     "/integration-logo4.png",
     "/integration-logo5.png",
@@ -17,7 +17,7 @@ const integrations = [
     "/integration-logo10.png",
     "/integration-logo11.png",
     "/integration-logo12.png",
-    "/integration-logo2.png",
+    "/integration-logo2-1.png",
     "/integration-logo3.png",
   ],
   [
@@ -25,7 +25,7 @@ const integrations = [
     "/integration-logo5.png",
     "/integration-logo4.png",
     "/integration-logo3.png",
-    "/integration-logo2.png",
+    "/integration-logo2-1.png",
     "/integration-logo1.png",
   ],
 ];
